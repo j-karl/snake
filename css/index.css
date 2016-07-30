@@ -1,0 +1,394 @@
+
+body{
+	margin:0;
+	padding:0;
+	background-image: url("../img/background.jpg");
+	overflow: hidden;
+}
+
+.changjing{
+		width: 600px;
+		height: 600px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 80px;
+		bottom: 0;
+		margin: auto;
+}
+.back{
+	width: 30px;
+	height: 30px;
+	float: left;
+	transition:all 0.8s ease;
+	z-index: 3;
+	position: relative;
+}
+.inner{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.she{
+	width: 30px;
+	height: 30px;
+	background-image: url(../img/shenti.png);
+	background-size: 30px 30px;
+}
+.shetou{
+	width: 30px;
+	height: 30px;
+	background-image: url(../img/shetouyou.png);
+	background-size: 30px 30px;
+}
+.shetou.shetouyou{
+	width: 30px;
+	height: 30px;
+	background-image: url(../img/shetouyou.png);
+	background-size: 30px 30px;
+}
+.shetou.shetouzuo{
+	width: 30px;
+	height: 30px;
+	background-image: url(../img/shetouzuo.png);
+	background-size: 30px 30px;
+}
+.shetou.shetoushang{
+	width: 30px;
+	height: 30px;
+	background-image: url(../img/shetoushang.png);
+	background-size: 30px 30px;
+}
+.shetou.shetouxia{
+	width: 30px;
+	height: 30px;
+	background-image: url(../img/shetouxia.png);
+	background-size: 30px 30px;
+}
+.shiwu{
+	width: 30px;
+	height: 30px;
+	background-image: url(../img/shiwu.png);
+	background-size: 30px 30px;
+}
+
+.end{
+	width: 300px;
+	height: 200px;
+	background-image: url(../img/end.png);
+	background-size: 298px 134px;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 888;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	transition:all 0.8s ease;
+	transform:translateY(-500px);		
+}
+.end .gameover{
+	margin-left: 90px;
+	height: 30px;
+	font-size: 30px;
+	position: absolute;
+	left: 10px;
+	top: 80px;
+
+}
+.end.endjiemian{
+	transform:translateY(0);
+}
+
+.end .restart{
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+	border-radius: 50%;
+	position: absolute;
+	left: 60px;
+	bottom: 60px;
+	cursor: pointer;
+}
+.end .startMenu{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	right: 60px;
+	bottom: 60px;
+	cursor: pointer;
+	border-radius: 50%;
+}
+.pause{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 150px;
+	height: 100px;
+	/*background: red;*/
+	text-align: center;
+	line-height: 100px;
+	color: black;
+	font-size: 50px;
+	font-family: "微软雅黑";
+	display: none;
+	z-index: 888;
+}
+.pause.pauseShow{
+	display: block;
+}
+
+
+.kaishi{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width:600px;
+	height: 680px;
+	background:#01AA35;
+	/*opacity: 0.7;*/
+	text-align: center;
+	line-height: 200px;
+	font-size: 50px;
+	z-index: 9999;
+	animation:kaishishow 1s linear forwards;
+}
+@keyframes kaishishow{
+	0%{
+		transform:translate3d(0,-500px,0);
+	}
+	100%{
+		transform:translate3d(0,0,0);
+	}
+}
+.kaishi span{
+	position: absolute;
+	left: 220px;
+	top: 250px;
+	margin: auto;
+	width: 140px;
+	height: 44px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 30px;
+	cursor: pointer;
+	background-image: url(../img/start.png);
+	background-size: 140px 44px;
+}
+.kaishi .title1{
+	position: absolute;
+	top: 150px;
+	left: 130px;
+	font-family: "方正稚艺简体";
+	color: white;
+	font-size: 50px;
+	transform:rotateZ(-30deg);
+	background-image: none;
+	cursor: default;
+}
+.kaishi .title2{
+	position: absolute;
+	top: 120px;
+	left: 220px;
+	font-family: "方正稚艺简体";
+	color: white;
+	font-size: 50px;
+	cursor: default;
+	background-image: none;
+
+}
+.kaishi .title3{
+	position: absolute;
+	top: 150px;
+	left: 310px;
+	font-family: "方正稚艺简体";
+	color: white;
+	font-size: 50px;
+	transform:rotateZ(30deg);
+	cursor: default;
+	background-image: none;
+
+}
+.kaishi.kaishihide{
+	animation:kaishih 0.5s linear forwards;
+	/*transform:translate3d(0,-500px,0);*/
+}
+@keyframes kaishih{
+	0%{
+		transform:translate3d(0,0,0);
+	}
+	100%{
+		transform:translate3d(0,-680px,0);
+	}
+}
+
+.easy{
+	width: 140px;
+	height: 44px;
+	background-image: url(../img/easy.png);
+	background-size: 140px 44px;
+	position: absolute;
+	left: 220px;
+	cursor: pointer;
+	top: 320px;
+}
+.medium{
+	width: 140px;
+	height: 44px;
+	background-image: url(../img/medium.png);
+	background-size: 140px 44px;
+	position: absolute;
+	left: 220px;
+	cursor: pointer;
+	top: 380px;
+}
+.hard{
+	width: 140px;
+	height: 44px;
+	background-image: url(../img/hard.png);
+	background-size: 140px 44px;
+	position: absolute;
+	left: 220px;
+	cursor: pointer;
+	top: 440px;
+}
+
+
+.changjing .dingwei{
+	position: relative;
+}
+.changjing .dingwei .jishi{
+	width: 100px;
+	height: 50px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	background: rgba(0,200,50,0.5);
+}
+.jishi span{
+	margin-left: 30px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 18px;
+	font-family: "微软雅黑";
+	color:white;
+}
+
+.state{
+	width: 600px;
+	height: 80px;
+	background: red url(../img/zhuangtai.png);
+	background-size: 600px 80px;
+	position: relative;	
+	margin: 0 auto;
+	border-bottom: 2px solid #8A581D;
+	z-index: 5px;
+}
+.star{
+	position: absolute;
+	left: 100px;
+	top: 29px;
+	width: 80px;
+	height: 25px;
+	/*background: red;*/
+	text-align: right;
+	line-height: 25px;
+	font-size: 18px;
+	color: white;
+	font-family: "Myriad Pro";
+}
+.play{
+	width: 68px;
+	height: 52px;
+	border-radius: 50%;
+	position: absolute;
+	right: 10px;
+	top: 13px;
+}
+.play.pausee{
+	background: url(../img/play.png);
+	background-size: 68px 52px;
+}
+
+.worm{
+	width: 60px;
+	height: 30px;
+	background-image: url(../img/worm.png);
+	background-position: center;
+	background-size: 60px 30px;
+	position: relative;
+	/*z-index: 2;*/
+	float: left;
+	margin-right: 130px;
+	margin-bottom: 200px;
+}
+.worm.dongqilai{
+	animation:pao 2s linear infinite;
+}
+@keyframes pao{
+	0%,100%{
+		transform:translate3d(0,0,0);
+	}
+	50%{
+		transform:translate3d(50px,0,0) ;
+	}
+	51%{
+		transform:translate3d(50px,0,0) rotateY(180deg);
+	}
+	98%{
+		transform:translate3d(0px,0,0) rotateY(180deg);
+	}
+}
+.worm1{
+	width: 60px;
+	height: 30px;
+	background-image: url(../img/worm1.png);
+	background-position: center;
+	background-size: 60px 30px;
+	position: relative;
+	margin-left: 130px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	float: left;
+}
+.worm1.fanxiang{
+	animation:paopao 2s linear infinite;
+}
+@keyframes paopao{
+	0%,100%{
+		transform:translate3d(40px,0,0);
+	}
+	50%{
+		transform:translate3d(0px,0,0) ;
+	}
+	51%{
+		transform:translate3d(0px,0,0) rotateY(180deg);
+	}
+	98%{
+		transform:translate3d(40px,0,0) rotateY(180deg);
+	}
+	
+}
+.bao1{
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+}
+.bao2{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
